@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.logging.Logger;
 
 @RestController
 public class CurrencyExchangeController {
-
     @Autowired
     private CurrencyExchangeRepository currencyExchangeRepository;
 

@@ -35,6 +35,14 @@ dependencies {
 	implementation 'org.springframework.cloud:spring-cloud-starter-config'
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 	implementation 'io.github.resilience4j:resilience4j-spring-boot2'
+	// Micrometer Observation
+	implementation 'io.micrometer:micrometer-observation'
+
+	// OPTION 1: Open Telemetry as Bridge (RECOMMENDED)
+	// Open Telemetry
+	// - Simplified Observability (metrics, logs, and traces)
+	implementation 'io.micrometer:micrometer-tracing-bridge-otel'
+	implementation 'io.opentelemetry:opentelemetry-exporter-zipkin'
 	runtimeOnly 'com.h2database:h2'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
