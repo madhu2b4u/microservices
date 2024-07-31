@@ -26,8 +26,18 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.cloud:spring-cloud-starter-config'
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+    // Feign Micrometer integration
+    implementation 'io.github.openfeign:feign-micrometer'
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    // Micrometer Observation
+    implementation 'io.micrometer:micrometer-observation'
+
+    // OPTION 1: Open Telemetry as Bridge (RECOMMENDED)
+    // Open Telemetry
+    // - Simplified Observability (metrics, logs, and traces)
+    implementation 'io.micrometer:micrometer-tracing-bridge-otel'
+    implementation 'io.opentelemetry:opentelemetry-exporter-zipkin'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
